@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flor Storme — software engineer</title>
+<meta name="description" content="Flor Storme, software engineer in Antwerp. I build the tooling other developers work inside: document pipelines, agent platforms, internal developer tools.">
+<meta name="theme-color" content="#0F2126">
+
+<meta property="og:title" content="Flor Storme — software engineer">
+<meta property="og:description" content="I build the tooling other developers work inside: document pipelines, agent platforms, internal developer tools.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/flor.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#about">Skip to content</a>
+
+<header class="topbar">
+  <a class="topbar__mark" href="#top">FS</a>
+  <nav class="topbar__nav" aria-label="Sections">
+    <a href="#about">about</a>
+    <a href="#stack">stack</a>
+    <a href="#work">work</a>
+    <a href="#beyond">beyond</a>
+    <a href="#contact">contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ── hero ─────────────────────────────────────────────── -->
+  <section class="hero">
+    <p class="eyebrow">Antwerp, Belgium · open to interesting problems</p>
+    <h1 class="hero__name">Flor<br>Storme</h1>
+    <p class="hero__thesis">
+      Software engineer. I build the tooling other developers work
+      inside — document pipelines, agent platforms, and the internal
+      tools that make a team faster than it was last quarter.
+    </p>
+
+    <figure class="pipe" id="pipe">
+      <figcaption class="pipe__caption">
+        <span class="pipe__label">the shape of most of my work</span>
+        <button class="pipe__run" type="button" data-run>
+          <span data-run-label>run it</span>
+        </button>
+      </figcaption>
+
+      <ol class="pipe__stages">
+        <li class="stage" data-stage>
+          <span class="stage__dot" aria-hidden="true"></span>
+          <span class="stage__name">ingest</span>
+          <span class="stage__note">pdf · docx · transcript</span>
+        </li>
+        <li class="wire" data-wire aria-hidden="true"></li>
+        <li class="stage" data-stage>
+          <span class="stage__dot" aria-hidden="true"></span>
+          <span class="stage__name">chunk</span>
+          <span class="stage__note">semantic split</span>
+        </li>
+        <li class="wire" data-wire aria-hidden="true"></li>
+        <li class="stage" data-stage>
+          <span class="stage__dot" aria-hidden="true"></span>
+          <span class="stage__name">embed</span>
+          <span class="stage__note">vector store</span>
+        </li>
+        <li class="wire" data-wire aria-hidden="true"></li>
+        <li class="stage" data-stage>
+          <span class="stage__dot" aria-hidden="true"></span>
+          <span class="stage__name">summarise</span>
+          <span class="stage__note">llm pass</span>
+        </li>
+        <li class="wire" data-wire aria-hidden="true"></li>
+        <li class="stage stage--out" data-stage>
+          <span class="stage__dot" aria-hidden="true"></span>
+          <span class="stage__name">serve</span>
+          <span class="stage__note">api · ui · answers</span>
+        </li>
+      </ol>
+
+      <p class="pipe__out" data-out>Unstructured input in, something queryable out.</p>
+    </figure>
+  </section>
+
+  <!-- ── about ────────────────────────────────────────────── -->
+  <section class="section" id="about">
+    <p class="eyebrow">about</p>
+    <div class="about">
+      <div class="about__text">
+        <h2 class="h2">I took the long way into this, and I'd do it again.</h2>
+        <p>
+          I spent two years on Biochemistry and Biotechnology in Antwerp and
+          Ghent before admitting the obvious: I wanted to build things, not
+          pipette them. I finished a Bachelor in Applied Computer Science at
+          HoGent and have been shipping software ever since.
+        </p>
+        <p>
+          These days I work at <strong>Human8</strong>, where most of my work sits
+          where messy input meets a system that has to make sense of it —
+          document processing, search, LLM and agent tooling, and the developer
+          platform around all of it. I like the unglamorous parts: the pipeline
+          that stops silently failing, the internal tool that saves the team an
+          afternoon a week.
+        </p>
+        <p>
+          Outside work I build for myself, mostly in the open. <a href="#work">Odysseus</a>
+          is the largest of those — a self-hosted AI workspace I run on my own
+          hardware because I wanted to know exactly how the whole stack fits
+          together.
+        </p>
+        <p class="about__cta">
+          <a class="btn" href="assets/cv/cv-flor-storme.pdf">Download CV (PDF)</a>
+        </p>
+      </div>
+
+      <figure class="portrait" data-portrait>
+        <img src="assets/img/flor.jpg" alt="Flor Storme" data-portrait-img>
+        <figcaption class="portrait__hint">
+          Portrait goes here — save it as <code>assets/img/flor.jpg</code>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ── stack ────────────────────────────────────────────── -->
+  <section class="section" id="stack">
+    <p class="eyebrow">stack</p>
+    <h2 class="h2">What I reach for</h2>
+    <p class="lede">
+      Grouped by what I actually use it for, in rough order of how much
+      of my week each one takes.
+    </p>
+
+    <div class="grid grid--stack">
+      <article class="card">
+        <h3 class="card__title">Backend &amp; platform</h3>
+        <ul class="tags">
+          <li>C#</li><li>.NET</li><li>SQL</li><li>Python</li>
+          <li>Bun</li><li>Node</li><li>REST APIs</li><li>Java</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3 class="card__title">Frontend</h3>
+        <ul class="tags">
+          <li>Vue 3</li><li>TypeScript</li><li>Quasar</li>
+          <li>Angular</li><li>HTML / CSS</li><li>Vite</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3 class="card__title">AI &amp; agents</h3>
+        <ul class="tags">
+          <li>LLM pipelines</li><li>RAG</li><li>MCP servers</li>
+          <li>Agent tooling</li><li>vLLM</li><li>Ollama</li><li>Vector search</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3 class="card__title">Cloud &amp; ops</h3>
+        <ul class="tags">
+          <li>Azure</li><li>Azure DevOps</li><li>App Insights</li>
+          <li>Docker</li><li>Kubernetes</li><li>Git</li><li>Linux</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="ways">
+      <h3 class="ways__title">How I work</h3>
+      <ul class="ways__list">
+        <li><span>Precise about detail.</span> The bug you can't reproduce is still a bug.</li>
+        <li><span>Comfortable delegating.</span> Two years leading a scouts group taught me more about this than any sprint.</li>
+        <li><span>Steady under pressure.</span> Production incidents are a process, not a panic.</li>
+        <li><span>Explains things plainly.</span> If I can teach it to an eight-year-old, I understand it.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── work ─────────────────────────────────────────────── -->
+  <section class="section" id="work">
+    <p class="eyebrow">work</p>
+    <h2 class="h2">Selected projects</h2>
+
+    <div class="grid grid--work">
+      <article class="proj">
+        <h3 class="proj__title">Odysseus</h3>
+        <p class="proj__role">personal · Python · full stack</p>
+        <p class="proj__desc">
+          A self-hosted AI workspace — the ChatGPT-style experience, running
+          entirely on your own hardware and your own data. Chat against local
+          or hosted models, an agent that picks up tools and finishes the task,
+          hardware-aware model recommendations, multi-step research runs,
+          persistent memory and skills, plus mail, notes and calendar the agent
+          can actually act on.
+        </p>
+        <ul class="tags">
+          <li>vLLM</li><li>llama.cpp</li><li>Ollama</li><li>MCP</li>
+          <li>ChromaDB</li><li>Docker</li><li>PWA</li>
+        </ul>
+      </article>
+
+      <article class="proj">
+        <h3 class="proj__title">Human8 AI toolkit</h3>
+        <p class="proj__role">Human8 · internal platform</p>
+        <p class="proj__desc">
+          A shared plugin marketplace that puts the same AI workflows in front
+          of the dev, product and QA teams — packaged skills for planning,
+          review and debugging, on top of an Azure DevOps MCP server. One
+          install, and the whole team's tooling agrees with itself.
+        </p>
+        <ul class="tags">
+          <li>MCP</li><li>Azure DevOps</li><li>Claude Code</li><li>CI pipelines</li>
+        </ul>
+      </article>
+
+      <article class="proj">
+        <h3 class="proj__title">Document processing platform</h3>
+        <p class="proj__role">Human8 · backend &amp; observability</p>
+        <p class="proj__desc">
+          The pipeline in the hero, in production: research documents in,
+          chunked, embedded, summarised and served back as something teams can
+          search and reason over. I also built the tooling to trace a single
+          file through every step of it, which is how you find out where
+          processing quietly stalled.
+        </p>
+        <ul class="tags">
+          <li>.NET</li><li>Azure</li><li>App Insights</li><li>KQL</li><li>Batch jobs</li>
+        </ul>
+      </article>
+
+      <article class="proj">
+        <h3 class="proj__title">Surpmatched</h3>
+        <p class="proj__role">personal · full stack</p>
+        <p class="proj__desc">
+          A stats tracker for the Unmatched board game, built because arguing
+          about who actually wins more is better with data. TypeScript end to
+          end, Bun and Elysia on the server, Vue 3 and Quasar on the client.
+        </p>
+        <ul class="tags">
+          <li>Bun</li><li>Elysia</li><li>Vue 3</li><li>Quasar</li><li>Kysely</li>
+        </ul>
+      </article>
+
+      <article class="proj">
+        <h3 class="proj__title">Media gallery</h3>
+        <p class="proj__role">Human8 · frontend</p>
+        <p class="proj__desc">
+          A Vue 3 media library used inside the research platform — upload,
+          browse and manage large sets of participant media without the page
+          falling over.
+        </p>
+        <ul class="tags">
+          <li>Vue 3</li><li>JavaScript</li><li>Jest</li><li>Azure Pipelines</li>
+        </ul>
+      </article>
+
+      <article class="proj">
+        <h3 class="proj__title">Teaching Scratch</h3>
+        <p class="proj__role">summers · ages 8–13</p>
+        <p class="proj__desc">
+          Programming lessons for kids during school holidays, and IT help at
+          home for the generation that never got any. Both are the same skill:
+          removing everything from an explanation that isn't load-bearing.
+        </p>
+        <ul class="tags">
+          <li>Scratch</li><li>Curriculum</li><li>Patience</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ── beyond ───────────────────────────────────────────── -->
+  <section class="section" id="beyond">
+    <p class="eyebrow">beyond code</p>
+    <div class="beyond">
+      <h2 class="h2">Five years in the scouts, two of them leading the group.</h2>
+      <p>
+        Group leader is an unpaid management job with a volunteer team, a
+        budget, other people's children and no authority to fall back on. It
+        is the best training I've had for anything I do at work.
+      </p>
+      <p>
+        The rest of it: teaching Scratch to eight-year-olds each summer,
+        fixing laptops for neighbours who'd otherwise give up on them, and a
+        stint at Beego. I keep ending up somewhere between building the thing
+        and helping someone else use it.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── contact ──────────────────────────────────────────── -->
+  <section class="section section--contact" id="contact">
+    <p class="eyebrow">contact</p>
+    <h2 class="h2">Say hello</h2>
+    <p class="lede">
+      Happy to talk about a role, a stubborn pipeline, or self-hosting
+      language models on hardware that shouldn't manage it.
+    </p>
+    <ul class="links">
+      <li><a href="mailto:flor@wearehuman8.com">flor@wearehuman8.com</a></li>
+      <li><a href="https://github.com/PabloStorme">github.com/PabloStorme</a></li>
+      <li><a href="https://www.linkedin.com/in/flor-storme-3715a01b7/">linkedin.com/in/flor-storme-3715a01b7</a></li>
+      <li><a href="assets/cv/cv-flor-storme.pdf">Curriculum vitae (PDF)</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Flor Storme · Antwerp</p>
+  <p>Hand-written HTML and CSS. No framework, no build step.</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
