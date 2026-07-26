@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#E9604A"/>
+  <!-- "F" drawn as rects so it needs no webfont and stays crisp at 16px -->
+  <g fill="#121212">
+    <rect x="10.5" y="7.5" width="4.4" height="17"/>
+    <rect x="10.5" y="7.5" width="11.6" height="4.3"/>
+    <rect x="10.5" y="14.2" width="8.6" height="4.1"/>
+  </g>
+</svg>

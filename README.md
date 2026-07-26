@@ -7,10 +7,15 @@ it works.
 ```
 index.html      all the content
 styles.css      all the styling
-main.js         hero pipeline animation + portrait fallback
+main.js         word-by-word text reveal + portrait fallback
+favicon.svg     coral "F" mark, drawn as paths so it needs no font
+favicon.png     32px fallback for browsers without SVG icon support
 assets/img/     your portrait  → flor.jpg
 assets/cv/      your CV        → cv-flor-storme.pdf
 ```
+
+To change the favicon, edit `favicon.svg` and regenerate the PNG from it —
+any SVG-to-PNG export at 32×32 with a transparent background will do.
 
 ## Two files to drop in
 
