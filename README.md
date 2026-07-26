@@ -88,8 +88,12 @@ the certificate is issued.
 
 Everything readable lives in `index.html` — no templating to learn. The
 sections are marked with comments (`<!-- ── work ── -->`). To add a project,
-copy an existing `<article class="proj">` block and change the text.
+copy an existing `<article class="row">` block and change the text.
 
 Colours and fonts are the CSS custom properties at the top of `styles.css`.
-The hero pipeline stages are the `<li class="stage">` items in `index.html`;
-add or remove a stage and put a `<li class="wire">` between each pair.
+The coral accent is deliberately rationed — small labels and the email link
+only; spreading it further is what makes it stop working.
+
+Any element with `data-reveal` gets its words split and lit up as you scroll
+(`data-reveal="load"` fades in on page load instead). Keep the text inside
+those elements plain — `main.js` flattens any markup nested in them.
