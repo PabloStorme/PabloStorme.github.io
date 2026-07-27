@@ -1,0 +1,3 @@
+# The CV carries personal contact details. Reachable by link, kept out of search.
+User-agent: *
+Disallow: /assets/cv/
