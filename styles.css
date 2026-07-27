@@ -160,21 +160,11 @@ a:hover { text-decoration-color: var(--accent); }
 .hero__links a:hover { color: var(--text); }
 
 .hero__portrait { position: relative; margin: 0; background: var(--surface); }
-.hero__portrait img { width: 100%; height: 100%; object-fit: cover; }
+/* ponytail: 30% biases the crop toward the face — retune if the photo changes */
+.hero__portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
 
-.portrait__hint { display: none; }
-.hero__portrait.is-empty { display: grid; place-items: center; }
+/* ponytail: if the photo ever 404s, show the empty frame, not a broken image */
 .hero__portrait.is-empty img { display: none; }
-.hero__portrait.is-empty .portrait__hint {
-  display: block;
-  padding: 1.5rem;
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  line-height: 1.8;
-  text-align: center;
-  color: var(--dim);
-}
-.portrait__hint code { color: var(--accent); }
 
 /* ── bands ───────────────────────────────────────────────── */
 
@@ -353,7 +343,7 @@ a:hover { text-decoration-color: var(--accent); }
   .hero { grid-template-columns: minmax(0, 1fr); min-height: 0; }
   .hero__panel { gap: 2.5rem; padding-top: clamp(1.5rem, 4vh, 2.5rem); padding-bottom: 2.5rem; }
   .hero__mid { max-width: none; }
-  .hero__portrait { aspect-ratio: 3 / 2; }
+  .hero__portrait { aspect-ratio: 4 / 5; }
 
   .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .bento > :nth-child(1),
